@@ -14,7 +14,7 @@ def checkSubstring(find_str, str_list):
 
 def longestSubString(str_list):
   longest = ''
-  '''Extracts all substrings from the first string in a list, and sends longest substring candidates to be checked.'''
+  """Extracts all substrings from the first string in a list, and sends longest substring candidates to be checked."""
   for start_idx in range(len(str_list[0])):
     for end_idx in range(len(str_list[0]), start_idx, -1):
       if end_idx - start_idx <= len(longest):
