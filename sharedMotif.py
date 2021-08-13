@@ -2,7 +2,7 @@ from Bio import SeqIO
 
 # seqs stores the sequences
 seqs = []
-for sr in SeqIO.parse('rosalind_motif.txt','fasta'):
+for sr in SeqIO.parse('rosalind_lcsm.txt','fasta'):
   seqs.append(str(sr.seq))
 
 def checkSubstring(find_str, str_list):
@@ -19,7 +19,7 @@ def longestSubString(str_list):
     for end_idx in range(len(str_list[0]), start_idx, -1):
       if end_idx - start_idx <= len(longest):
         break
-      elif checkSubstring(str_list[0][start_idx:end_idx], str_list):
+      elif checkSubstring(str_list[0][start_idx:end_idx], str_list[1:]):
         longest = str_list[0][start_idx:end_idx]
   return longest
 
