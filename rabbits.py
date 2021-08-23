@@ -1,7 +1,7 @@
 month, k = map(int, input().strip().split())
-f = [0,1,1]
-for x in range(3, month+1):
-  f.append(f[-1]+f[-2]*k)
+f = [0, 1, 1]
+for x in range(3, month + 1):
+    f.append(f[-1] + f[-2] * k)
 print(f[-1])
 
 # recursion
